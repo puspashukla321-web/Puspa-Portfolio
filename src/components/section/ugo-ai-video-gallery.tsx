@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
 
+const defaultVideo = {
+  title: "Zoom group AI session",
+  src: "/ugo-ai-session.mp4",
+  poster: "/ugo-ai-session.png",
+};
+
 const videos = [
-  {
-    title: "Zoom group AI session",
-    src: "/ugo-ai-session.mp4",
-    poster: "/ugo-ai-session.png",
-  },
   {
     title: "Puspa on learning AI",
     src: "/ugo-ai-video-1.mp4",
@@ -27,8 +28,7 @@ const videos = [
 ];
 
 export function UgoAiVideoGallery() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const activeVideo = videos[activeIndex];
+  const [activeVideo, setActiveVideo] = useState(defaultVideo);
 
   return (
     <section aria-label="U-GO AI video gallery" className="p-4 sm:p-6">
@@ -56,15 +56,15 @@ export function UgoAiVideoGallery() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
-          {videos.map((video, index) => {
-            const selected = index === activeIndex;
+          {videos.map((video) => {
+            const selected = video.src === activeVideo.src;
             return (
               <button
                 key={video.src}
                 type="button"
-                onMouseEnter={() => setActiveIndex(index)}
-                onFocus={() => setActiveIndex(index)}
-                onClick={() => setActiveIndex(index)}
+                onMouseEnter={() => setActiveVideo(video)}
+                onFocus={() => setActiveVideo(video)}
+                onClick={() => setActiveVideo(video)}
                 aria-pressed={selected}
                 aria-label={`Play ${video.title}`}
                 className={`group flex min-w-0 items-center gap-3 rounded-xl border p-2 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
