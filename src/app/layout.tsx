@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
@@ -19,16 +19,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 const siteDescription =
   "Portfolio of Puspa Shukla, a BCA student in Kathmandu, Nepal, learning and building in web development, practical AI, and IT systems support.";
 
-const geist = Geist({
-  subsets: ["latin"],
+const cabinetGrotesk = localFont({
+  src: "../../public/fonts/CabinetGrotesk-Medium.ttf",
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-mono",
+  weight: "500",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -81,8 +76,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen overflow-x-hidden bg-background font-sans antialiased relative",
-          geist.variable,
-          geistMono.variable,
+          cabinetGrotesk.variable,
         )}
         suppressHydrationWarning
       >
