@@ -55,7 +55,10 @@ export function UgoAiVideoGallery() {
             See what Puspa says about AI
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
+        <div
+          className="grid grid-cols-2 gap-3 lg:grid-cols-1"
+          onMouseLeave={() => setActiveVideo(defaultVideo)}
+        >
           {videos.map((video) => {
             const selected = video.src === activeVideo.src;
             return (
