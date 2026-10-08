@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { DATA } from "@/data/resume";
+import { Icons } from "@/components/icons";
 
 export default function ContactSection() {
   return (
@@ -24,18 +24,62 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
-          <Link
+          Want to chat? Send me a direct question on{" "}
+          <a
+            href={DATA.contact.social.LinkedIn.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline underline-offset-4"
+          >
+            LinkedIn
+          </a>{" "}
+          or{" "}
+          <a
             href={DATA.contact.social.X.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="text-blue-500 underline underline-offset-4"
           >
-            with a direct question on twitter
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
+            X
+          </a>
+          .
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-5 text-sm">
+          <a className="inline-flex items-center gap-2 underline underline-offset-4" href={`mailto:${DATA.contact.email}`}>
+            <Icons.email className="size-4" />
+            {DATA.contact.email}
+          </a>
+          <a className="inline-flex items-center gap-2 underline underline-offset-4" href={`tel:${DATA.contact.tel}`}>
+            {DATA.contact.tel}
+          </a>
+          <a
+            className="inline-flex items-center gap-2 underline underline-offset-4"
+            href={DATA.contact.social.LinkedIn.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icons.linkedin className="size-4" />
+            LinkedIn
+          </a>
+          <a
+            className="inline-flex items-center gap-2 underline underline-offset-4"
+            href={DATA.contact.social.GitHub.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icons.github className="size-4" />
+            GitHub
+          </a>
+          <a
+            className="inline-flex items-center gap-2 underline underline-offset-4"
+            href={DATA.contact.social.X.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icons.x className="size-4" />
+            X
+          </a>
+        </div>
       </div>
     </div>
   );

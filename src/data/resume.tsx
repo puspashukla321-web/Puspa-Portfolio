@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ExpressJsIcon, Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, Brain } from "lucide-react";
+import { HomeIcon, NotebookIcon } from "lucide-react";
 import { ReactLight } from "@/components/icons/svgs/reactLight";
 import { NextjsIconDark } from "@/components/icons/svgs/nextjsIconDark";
 import { Typescript } from "@/components/icons/svgs/typescript";
@@ -16,330 +16,222 @@ const summaryLinkClassName =
   "underline underline-offset-4 transition-colors duration-200 hover:text-foreground cursor-pointer";
 
 export const DATA = {
-  name: "Nandalal Shukla",
-  initials: "NS",
-  url: "https://nandalalshukla.com",
-  location: "Greater Noida, India",
-  locationLink: "https://www.google.com/maps/place/greater+noida",
-  description:
-    "Full-Stack Developer | Building production-grade web applications with React, Next.js, and Node.js and typescript. Turning ideas into products that users actually love.",
-  summary: (
-    <>
-      <Link href="/work" className={summaryLinkClassName}>
-        Full Stack developer with 1+ years of experience{" "}
-      </Link>
-      in building production-grade projects. I contribute to{" "}
-      <Link href="/open-source" className={summaryLinkClassName}>
-        Open Source
-      </Link>
-      , and regularly participate in{" "}
-      <Link href="/hackathons" className={summaryLinkClassName}>
-        hackathons and tech events
-      </Link>
-      . Beyond fullstack development, I am also passionate about{" "}
-      <Link href="/projects" className={summaryLinkClassName}>
-        community-driven technology
-      </Link>
-      ,{" "}
-      <Link href="/content-creation" className={summaryLinkClassName}>
-        content creation
-      </Link>{" "}
-      and{" "}
-      <Link href="/projects" className={summaryLinkClassName}>
-        entrepreneurship
-      </Link>
-      .
-    </>
-  ),
-  avatarUrl: "/me.png",
+  name: "Puspa Shukla",
+  initials: "PS",
+  location: "Kathmandu, Nepal",
+  locationLink: "https://www.google.com/maps/place/Kathmandu/",
+  description: "BCA student | IT Support, Systems Administration & Web Development",
+  professionalSummary:
+    "BCA student at CAMAD College, affiliated with Pokhara University, with hands-on experience in web development, IT systems support, and applied AI. Recognized internationally through U-GO's global publication for leading AI training initiatives across eight countries, helping over 3,000 scholars build practical AI skills. Proven leadership, public speaking, and mentoring ability, with a strong commitment to continuous learning and expanding opportunities for women in technology.",
+  summary:
+    "BCA student at CAMAD College, affiliated with Pokhara University, with hands-on experience in web development, IT systems support, and applied AI. Recognized internationally through U-GO's global publication for leading AI training initiatives across eight countries, helping over 3,000 scholars build practical AI skills. Proven leadership, public speaking, and mentoring ability, with a strong commitment to continuous learning and expanding opportunities for women in technology.",
+  avatarUrl: "/puspa.jpg",
+  skillGroups: [
+    { label: "Programming Languages", items: "Python, HTML, CSS, JavaScript, C" },
+    { label: "Development Tools", items: "Git, GitHub, VS Code, Substack" },
+    { label: "Leadership & Team Management", items: "Led U-GO Nepal scholars; coordinated college and extracurricular teams" },
+    { label: "Communication & Public Speaking", items: "Hosted programs and engaged international participants at global summits" },
+    { label: "Teaching & Mentoring", items: "Guided students in Biological Science and AI fundamentals" },
+  ],
   skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "TypeScript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Express.js", icon: ExpressJsIcon },
-    { name: "PostgreSQL", icon: Postgresql },
-    { name: "Mongodb", icon: Icons.mongodb },
-    { name: "Zustand", icon: Icons.zustand },
-    { name: "React Query", icon: Icons.reactQuery },
-    { name: "Prisma", icon: Icons.prisma },
-    { name: "Tailwind CSS", icon: Icons.tailwindCss },
-    { name: "React Hook Form", icon: Icons.reactHookForm },
-    { name: "Zod", icon: Icons.zod },
-    { name: "Firebase", icon: Icons.firebase },
-    { name: "Supabase", icon: Icons.supabase },
-    { name: "ESLint", icon: Icons.eslint },
-    { name: "Python", icon: Python },
-    { name: "Java", icon: Java },
-    { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
+    { name: "Python", icon: undefined },
+    { name: "HTML", icon: undefined },
+    { name: "CSS", icon: undefined },
+    { name: "JavaScript", icon: undefined },
+    { name: "C", icon: undefined },
     { name: "Git", icon: Icons.git },
     { name: "GitHub", icon: Icons.github },
-    { name: "Bash", icon: Icons.bash },
-    { name: "Redis", icon: Icons.redis },
-    { name: "AI Agents", icon: Brain },
-    { name: "Vercel", icon: Icons.vercel },
-    { name: "OpenAI", icon: Icons.openai },
-    { name: "Figma", icon: Icons.figma },
-    { name: "Postman", icon: Icons.postman },
-    { name: "NPM", icon: Icons.npm },
-    { name: "Bun", icon: Icons.bun },
+    { name: "VS Code", icon: undefined },
+    { name: "Substack", icon: undefined },
+    { name: "Windows & Windows Server", icon: undefined },
+    { name: "Active Directory & Group Policy", icon: undefined },
+    { name: "Microsoft 365, Exchange, SharePoint & Teams", icon: undefined },
+    { name: "TCP/IP, DHCP, DNS & VPN", icon: undefined },
+    { name: "Hyper-V & VMware", icon: undefined },
+    { name: "Intune, RMM & MDM", icon: undefined },
+    { name: "Azure & AWS fundamentals", icon: undefined },
+    { name: "IT ticketing & SLA management", icon: undefined },
+    { name: "Leadership & Team Management", icon: undefined },
+    { name: "Communication & Public Speaking", icon: undefined },
+    { name: "Teaching & Mentoring", icon: undefined },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "shuklanandalal@gmaill.com",
-    tel: "+9778368234868",
+    email: "puspashukla321@gmail.com",
+    tel: "+9779764601918",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/nandalalshukla",
-        icon: Icons.github,
-        navbar: true,
-      },
-
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/nandalalshukla",
+        url: "https://www.linkedin.com/in/puspa-shukla-20b256287/",
         icon: Icons.linkedin,
-
+        navbar: true,
+      },
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/puspashukla321-web",
+        icon: Icons.github,
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://twitter.com/nandalal_shukla",
+        url: "https://x.com/PShukla95269",
         icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://www.youtube.com/@nandalalshukla",
-        icon: Icons.youtube,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "mailto:shuklanandalal@gmail.com",
+        url: "mailto:puspashukla321@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
     },
   },
-
   work: [
     {
-      company: "PASS The Excellence",
-      href: "https://passtheexcellence.com",
+      company: "IT Support & Systems Administration",
       badges: [],
-      location: "Remote",
-      title: "Full-Stack Developer",
-      logoUrl: "/ptelogo2.png",
-      start: "Jan 2025",
-      end: "Present",
+      location: "",
+      title: "Hands-on technical support",
+      logoUrl: "",
+      start: "",
+      end: "",
       work: [
-        "Built and deployed the institute's full-stack educational platform end-to-end as the sole developer.",
-        "Implemented course enrollment, quizzes, contact forms, certificate generation, and internal workflow tools.",
-        "Handled SEO improvements and set up the institute's Google Business presence to strengthen discoverability.",
+        "Supported end users across Windows and Windows Server environments, including Active Directory, Group Policy, Microsoft 365, Exchange, SharePoint, Teams, and Intune.",
+        "Worked with TCP/IP, DHCP, DNS, VPNs, routers, switches, Wi-Fi, Hyper-V, VMware, file servers, and NTFS permissions.",
+        "Gained hands-on experience with backup and disaster recovery, RMM/MDM tools, Azure and AWS fundamentals, IT ticketing, SLA management, and remote and hardware-based troubleshooting.",
       ],
-      impact: [
-        "Ranked the website in the top 5 Google results for its target keyword.",
-        "Made student enrollment and inquiry flows simpler and faster to use.",
-        "Improved engagement through quizzes and reduced repetitive manual work with internal tools.",
-      ],
+      impact: [],
       tools: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Nodemailer",
-        "Vercel",
+        "Windows & Windows Server",
+        "Active Directory & Group Policy",
+        "Microsoft 365, Exchange, SharePoint & Teams",
+        "TCP/IP, DHCP, DNS & VPN",
+        "Hyper-V & VMware",
+        "Intune, RMM & MDM",
         "Git",
         "GitHub",
       ],
-      urls: [
-        {
-          label: "Website",
-          href: "https://passtheexcellence.com",
-        },
-        {
-          label: "Github",
-          href: "https://github.com/nandalalshukla/passtheexcellence",
-        },
-      ],
+      urls: [] as { label: string; href: string }[],
     },
   ],
   education: [
     {
-      school: "Sharda University",
-      href: "https://sharda.ac.in",
-      logoUrl: "/sharda.png",
+      school: "CAMAD College",
+      href: "https://pu.edu.np/",
+      logoUrl: "",
       start: "2024",
-      end: "Present",
-      program: "Bachelor of Technology (B.Tech)",
-      specialization: "Computer Science and Engineering",
+      end: "2028",
+      program: "Bachelor in Computer Application",
+      specialization: "BCA.IT",
       details: [
-        "Pursuing Bachelor of Technology (B.Tech) in Computer Science and Engineering.",
-        "Maintaining a cumulative CGPA of 9.274.",
+        "Pursuing a Bachelor of Computer Application at CAMAD College, affiliated with Pokhara University.",
+        "Cumulative CGPA: 3.60.",
       ],
-      highlights: [
-        "COMPEX Scholarship recipient, fully funded by the Embassy of India in Nepal based on academic excellence.",
+      highlights: ["U-GO Scholarship recipient."],
+    },
+    {
+      school: "Everest Florida High School",
+      href: "",
+      logoUrl: "",
+      start: "2022",
+      end: "2024",
+      program: "Higher Secondary Education",
+      specialization: "Science",
+      details: [
+        "Cumulative CGPA: 3.55.",
+        "Full-tuition scholarship based on college entrance examination.",
       ],
     },
   ],
   projects: [
     {
-      title: "Sharda Online Library",
-      href: "https://notes-pyqssharda.vercel.app/",
-      dates: "2024",
+      title: "Currency Converter",
+      href: "",
+      dates: "Web project",
       active: true,
       description:
-        "Full-stack web platform providing easy access to previous year questions (PYQs), notes, and syllabus for Sharda University students. Built with secure authentication, role-based authorization, file uploads, and a RAG-based AI chatbot for university-related queries.",
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "Zod",
-        "Multer",
-        "Nodemailer",
-        "Cloudinary",
-        "Vercel",
-        "Render",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://notes-pyqssharda.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Github",
-          href: "https://github.com/nandalalshukla/shardaonlinelibrary",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Devpost",
-          href: "https://devpost.com/software/sharda-online-library",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "sol.png",
+        "Built a real-time currency conversion tool with input validation and a responsive interface.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      links: [] as never[],
+      image: "",
       video: "",
     },
     {
-      title: "PASS The Excellence",
-      href: "https://passtheexcellence.com",
-      dates: "2024 - 2025",
+      title: "Tic Tac Toe Game",
+      href: "",
+      dates: "Web project",
       active: true,
       description:
-        "Educational institute platform with features including course enrollment, contact forms, quizzes, and online study resources. Integrated Google Sheets using Apps Script for seamless data collection and management.",
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Nodemailer",
-        "Google Sheets API",
-        "Vercel",
-        "Git",
-        "GitHub",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://passtheexcellence.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "pte.png",
+        "Created a two-player JavaScript game with win/draw detection and CSS-based visual feedback.",
+      technologies: ["JavaScript", "CSS"],
+      links: [] as never[],
+      image: "",
       video: "",
     },
     {
-      title: "AuthHero",
-      href: "https://www.npmjs.com/package/@nandalalshukla/auth-hero",
-      dates: "2024",
+      title: "Rock, Paper, Scissors Game",
+      href: "",
+      dates: "Web project",
       active: true,
       description:
-        "NPM package with 300+ downloads. Ready-to-use authentication system with email/password signup, magic link verification, OAuth integration (Google, GitHub, Facebook), and multi-factor authentication using authenticator apps.",
-      technologies: [
-        "TypeScript",
-        "Express.js",
-        "Zod",
-        "PostgreSQL",
-        "Prisma",
-        "OAuth",
-        "NPM",
-      ],
-      links: [
-        {
-          type: "NPM",
-          href: "https://www.npmjs.com/package/@nandalalshukla/auth-hero",
-          icon: <Icons.npm className="size-3" />,
-        },
-        {
-          type: "Github",
-          href: "https://github.com/nandalalshukla/AuthHero",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Website",
-          href: "https://auth-hero-xi.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "authhero.png",
+        "Developed a player-versus-computer game with randomized logic, winner detection, and a dynamic score display.",
+      technologies: ["JavaScript", "CSS"],
+      links: [] as never[],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Route Way System",
+      href: "",
+      dates: "Web project",
+      active: true,
+      description:
+        "Designed a route-planning application that calculates efficient paths between locations using graph-based algorithms, with a focus on clean logic and usable output.",
+      technologies: ["JavaScript", "Algorithms"],
+      links: [] as never[],
+      image: "",
       video: "",
     },
   ],
   hackathonsAndEvents: [
     {
-      title: "NASA Space Apps Challenge",
-      dates: "2022",
+      title: "The Ripple Effect: U-GO Global Publication",
+      dates: "2025",
+      location: "International recognition",
+      description:
+        "Featured as a standout scholar for pioneering AI training among scholars and driving a 97% AI-course completion rate across 3,000+ scholars in eight countries.",
+      image: "",
+      links: [] as { label: string; href: string }[],
+    },
+    {
+      title: "U-GO Nepal Representative",
+      dates: "2025",
       location: "Global",
       description:
-        "Built a website to educate people about habitable exoplanets and the possibility of life on them. Explored the cosmos through interactive visualization and data-driven insights.",
-      image: "/nasaspaceapps.jpeg",
-      links: [
-        {
-          label: "NASA Space Apps Challenge",
-          href: "https://www.spaceappschallenge.org/2023/find-a-team/creative-astrophiles/?tab=project",
-        },
-      ],
+        "Represented Nepali scholars and attended the U-GO Global Summit in Vietnam, engaging in international collaboration and networking.",
+      image: "",
+      links: [] as { label: string; href: string }[],
     },
     {
-      title: "Smart India Hackathon",
+      title: "NASA Space Apps Challenge",
       dates: "2024",
-      location: "India",
+      location: "International hackathon",
       description:
-        "Developed a Resume-CV Matcher that helps HR teams easily filter the best candidates matching to their job descriptions from a large pool of candidates. Leveraging advanced matching algorithms for efficient recruitment.",
-      image: "/sih.jpg",
-      links: [
-        {
-          label: "Website",
-          href: "https://sih.gov.in/sih2025PS",
-        },
-      ],
+        "Participated in the NASA Space Apps Challenge, collaborating on technology-driven solutions for space and Earth sciences.",
+      image: "",
+      links: [] as { label: string; href: string }[],
     },
     {
-      title: "WICS Online Hackathon",
-      dates: "2025",
-      location: "Online",
+      title: "U-GO AI Workshops & Advanced Courses",
+      dates: "",
+      location: "AI learning and mentoring",
       description:
-        "Created Sharda Online Library, an online library platform for the university. Providing students with digital access to educational resources and research materials.",
-      image: "/wics.png",
-      links: [
-        {
-          label: "Youtube",
-          href: "https://youtu.be/gcgYS4RhYzs",
-        },
-      ],
+        "Certified in U-GO AI workshops and advanced courses; helped students build practical foundations in AI.",
+      image: "",
+      links: [] as { label: string; href: string }[],
     },
   ],
 } as const;

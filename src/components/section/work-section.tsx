@@ -104,11 +104,13 @@ export default function WorkSection() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                <span>
-                  {work.start} - {work.end ?? "Present"}
-                </span>
-              </div>
+              {(work.start || work.end) && (
+                <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
+                  <span>
+                    {work.start}{work.start && work.end ? " - " : ""}{work.end}
+                  </span>
+                </div>
+              )}
             </div>
           </AccordionTrigger>
           <AccordionContent className="mt-4 space-y-4 text-sm text-muted-foreground">

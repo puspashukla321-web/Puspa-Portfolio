@@ -9,6 +9,10 @@ export default async function BlogPage() {
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Blog</h1>
 
+      {posts.length === 0 && (
+        <p className="text-muted-foreground">No posts are available yet.</p>
+      )}
+
       {posts.map((post) => (
         <div key={post.id} className="mb-6 border-b pb-4">
           <Link href={`/blog/${post.slug}`}>

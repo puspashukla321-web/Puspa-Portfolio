@@ -103,14 +103,26 @@ export default function EducationSection() {
           </AccordionTrigger>
           <AccordionContent className="mt-4 space-y-4 text-sm text-muted-foreground">
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">Education Details</h3>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <h3 className="font-semibold text-foreground">Education Details</h3>
+                {education.href && (
+                  <a
+                    href={education.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm underline underline-offset-4"
+                  >
+                    Pokhara University
+                  </a>
+                )}
+              </div>
               <PointList
                 items={education.details}
                 accentClassName="bg-foreground/80"
               />
             </div>
 
-            {education.highlights && education.highlights.length > 0 && (
+            {"highlights" in education && education.highlights.length > 0 && (
               <div className="space-y-3">
                 <h3 className="font-semibold text-foreground">Highlights</h3>
                 <PointList

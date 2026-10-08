@@ -10,7 +10,7 @@ import {
 
 const CopyEmailBtn = () => {
   const email = DATA.contact.email;
-  const previewEmail = "shuklanandalal@gmail.com";
+  const previewEmail = email;
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {

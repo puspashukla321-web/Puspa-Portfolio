@@ -9,6 +9,10 @@ export type BlogPost = {
 };
 
 export async function getPublishedPosts() : Promise<BlogPost[]> {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_DATABASE_ID) {
+    return [];
+  }
+
   const res = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     filter: {

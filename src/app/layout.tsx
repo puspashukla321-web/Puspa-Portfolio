@@ -8,6 +8,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
+const siteUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -21,7 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL(siteUrl),
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
@@ -30,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
-    url: DATA.url,
+    url: siteUrl,
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",

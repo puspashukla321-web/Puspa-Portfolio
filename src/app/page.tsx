@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -19,7 +18,7 @@ export default function Page() {
     <main className="min-h-dvh flex flex-col gap-14 relative md:px-0">
       <section id="hero">
         <div className="w-full space-y-8">
-          <div className="gap-2 gap-y-5 flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
             <div className="gap-4 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
@@ -41,8 +40,14 @@ export default function Page() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="w-24 md:w-32 h-auto rounded-md border shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <Avatar className="h-40 w-32 shrink-0 rounded-md border shadow-lg ring-4 ring-muted md:ml-auto md:h-60 md:w-48">
+                {DATA.avatarUrl && (
+                  <AvatarImage
+                    alt={DATA.name}
+                    src={DATA.avatarUrl}
+                    className="h-full w-full object-cover"
+                  />
+                )}
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -56,7 +61,7 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-              {DATA.summary}
+              {DATA.professionalSummary}
             </div>
           </BlurFade>
         </div>
@@ -64,7 +69,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 className="text-xl font-bold">IT Support &amp; Systems Administration</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <WorkSection />
