@@ -119,7 +119,7 @@ export default function WorkSection() {
               <PointList items={work.work} accentClassName="bg-foreground/80" />
             </div>
 
-            {work.impact && (
+            {work.impact && work.impact.length > 0 && (
               <div className="space-y-3">
                 <h3 className="font-semibold text-foreground">Impact & Results</h3>
          

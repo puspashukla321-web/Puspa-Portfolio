@@ -34,6 +34,8 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <a
                   href={item.href}
+                  aria-label={item.label}
+                  title={item.label}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
                 >
@@ -67,6 +69,8 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <a
                     href={social.url}
+                    aria-label={name}
+                    title={name}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
                   >

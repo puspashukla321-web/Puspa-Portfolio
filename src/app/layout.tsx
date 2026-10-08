@@ -8,9 +8,16 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
-const siteUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
+  : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.URL
+      ? process.env.URL.replace(/\/$/, "")
+      : "http://localhost:3000";
+
+const siteDescription =
+  "Portfolio of Puspa Shukla, a BCA student in Kathmandu, Nepal, learning and building in web development, practical AI, and IT systems support.";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -27,13 +34,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} | BCA Student in Kathmandu, Nepal`,
     template: `%s | ${DATA.name}`,
   },
-  description: DATA.description,
+  description: siteDescription,
   openGraph: {
     title: `${DATA.name}`,
-    description: DATA.description,
+    description: siteDescription,
     url: siteUrl,
     siteName: `${DATA.name}`,
     locale: "en_US",
@@ -51,12 +58,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | BCA Student in Kathmandu, Nepal`,
     card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
+    description: siteDescription,
+    images: ["/me.png"],
   },
 };
 
@@ -83,6 +88,27 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  name: DATA.name,
+                  description:
+                    "BCA student in Kathmandu, Nepal, learning and building in web development, practical AI, and IT systems support.",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Kathmandu",
+                    addressCountry: "NP",
+                  },
+                  sameAs: [
+                    DATA.contact.social.LinkedIn.url,
+                    DATA.contact.social.GitHub.url,
+                  ],
+                }),
+              }}
+            />
             <div className="absolute inset-[0] overflow-hidden z-0">
               <FlickeringGrid
                 className="h-[100px] w-full"

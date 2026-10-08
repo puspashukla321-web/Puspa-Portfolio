@@ -51,7 +51,7 @@ const Resume = () => {
           ))}
         </PreviewSection>
 
-        <PreviewSection title="IT Support & Systems Administration">
+        <PreviewSection title="Hands-on Technical Experience">
           <ul className="list-disc space-y-1 pl-4">
             {DATA.work[0].work.map((item) => <li key={item}>{item}</li>)}
           </ul>

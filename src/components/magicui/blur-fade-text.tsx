@@ -6,6 +6,7 @@ import { useMemo } from "react";
 
 interface BlurFadeTextProps {
   text: string;
+  as?: "h1" | "p";
   className?: string;
   variant?: {
     hidden: { y: number };
@@ -26,6 +27,7 @@ const BlurFadeText = ({
   delay = 0,
   yOffset = 8,
   animateByCharacter = false,
+  as = "p",
 }: BlurFadeTextProps) => {
   const defaultVariants: Variants = {
     hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
@@ -64,22 +66,22 @@ const BlurFadeText = ({
     );
   }
 
+  const MotionElement = as === "h1" ? motion.h1 : motion.p;
+
   return (
-    <div className="flex">
-      <motion.span
-        initial="hidden"
-        animate="visible"
-        variants={combinedVariants}
-        transition={{
-          duration,
-          delay,
-          ease: "easeOut",
-        }}
-        className={cn("inline-block", className)}
-      >
-        {text}
-      </motion.span>
-    </div>
+    <MotionElement
+      initial="hidden"
+      animate="visible"
+      variants={combinedVariants}
+      transition={{
+        duration,
+        delay,
+        ease: "easeOut",
+      }}
+      className={cn("inline-block", className)}
+    >
+      {text}
+    </MotionElement>
   );
 };
 

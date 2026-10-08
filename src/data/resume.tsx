@@ -22,10 +22,10 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Kathmandu/",
   description: "BCA student | IT Support, Systems Administration & Web Development",
   professionalSummary:
-    "BCA student at CAMAD College, affiliated with Pokhara University, with hands-on experience in web development, IT systems support, and applied AI. Recognized internationally through U-GO's global publication for leading AI training initiatives across eight countries, helping over 3,000 scholars build practical AI skills. Proven leadership, public speaking, and mentoring ability, with a strong commitment to continuous learning and expanding opportunities for women in technology.",
+    "I’m a BCA student at CAMAD College, affiliated with Pokhara University, learning through web projects and hands-on IT systems support. Through U-GO, I’ve helped lead AI learning initiatives for scholars; its global publication reported a 97% course completion rate across more than 3,000 scholars in eight countries. I enjoy sharing what I learn, mentoring others, and helping more women find opportunities in technology.",
   summary:
-    "BCA student at CAMAD College, affiliated with Pokhara University, with hands-on experience in web development, IT systems support, and applied AI. Recognized internationally through U-GO's global publication for leading AI training initiatives across eight countries, helping over 3,000 scholars build practical AI skills. Proven leadership, public speaking, and mentoring ability, with a strong commitment to continuous learning and expanding opportunities for women in technology.",
-  avatarUrl: "/puspa.jpg",
+    "I’m a BCA student at CAMAD College, affiliated with Pokhara University, learning through web projects and hands-on IT systems support. Through U-GO, I’ve helped lead AI learning initiatives for scholars; its global publication reported a 97% course completion rate across more than 3,000 scholars in eight countries. I enjoy sharing what I learn, mentoring others, and helping more women find opportunities in technology.",
+  avatarUrl: "",
   skillGroups: [
     { label: "Programming Languages", items: "Python, HTML, CSS, JavaScript, C" },
     { label: "Development Tools", items: "Git, GitHub, VS Code, Substack" },
@@ -91,10 +91,10 @@ export const DATA = {
   },
   work: [
     {
-      company: "IT Support & Systems Administration",
+      company: "Hands-on Technical Experience",
       badges: [],
       location: "",
-      title: "Hands-on technical support",
+      title: "IT support & systems administration",
       logoUrl: "",
       start: "",
       end: "",
@@ -203,7 +203,7 @@ export const DATA = {
       location: "International recognition",
       description:
         "Featured as a standout scholar for pioneering AI training among scholars and driving a 97% AI-course completion rate across 3,000+ scholars in eight countries.",
-      image: "",
+      image: "/ugo-ripple-effect-article.jpeg",
       links: [] as { label: string; href: string }[],
     },
     {
@@ -212,8 +212,27 @@ export const DATA = {
       location: "Global",
       description:
         "Represented Nepali scholars and attended the U-GO Global Summit in Vietnam, engaging in international collaboration and networking.",
-      image: "",
-      links: [] as { label: string; href: string }[],
+      image: "/ugo-nepal-vietnam.jpg",
+      links: [
+        {
+          label: "Read how I represented Nepal in Vietnam",
+          href: "https://ugonepal.org/u-go-nepal-scholars-represent-nepal-at-the-2025-u-go-ambassador-program-in-vietnam/",
+        },
+      ] as { label: string; href: string }[],
+    },
+    {
+      title: "Top 6 Finalist | TechSkills Nepal IT Scholarship Program",
+      dates: "2025",
+      location: "TechSkills Nepal IT Scholarship Program",
+      description:
+        "From 2,000+ applicants to the Grand Finale stage, Puspa’s journey reflects confidence, dedication, learning, and continuous growth.",
+      image: "/techskills-working.jpg",
+      links: [
+        {
+          label: "Read the Banking Samachar feature",
+          href: "https://bankingsamachar.com/news/133050/",
+        },
+      ] as { label: string; href: string }[],
     },
     {
       title: "NASA Space Apps Challenge",
@@ -221,7 +240,7 @@ export const DATA = {
       location: "International hackathon",
       description:
         "Participated in the NASA Space Apps Challenge, collaborating on technology-driven solutions for space and Earth sciences.",
-      image: "",
+      image: "/nasa-space-apps-team.jpeg",
       links: [] as { label: string; href: string }[],
     },
     {
