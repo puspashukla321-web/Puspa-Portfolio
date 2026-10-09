@@ -67,8 +67,19 @@ export async function GET() {
     document.font("Helvetica").text(group.items);
   }
 
-  addSection("IT Support & Systems Administration");
-  for (const item of DATA.work[0].work) addBullet(item);
+  addSection("Work Experience");
+  for (const role of DATA.work) {
+    document.font("Helvetica-Bold").text(`${role.company} - ${role.title}`);
+    document.font("Helvetica");
+    for (const item of role.work) addBullet(item);
+    if ("toolGroups" in role && role.toolGroups) {
+      for (const group of role.toolGroups) {
+        document.font("Helvetica-Bold").text(`${group.label}: `, { continued: true });
+        document.font("Helvetica").text(group.items.join(", "));
+      }
+    }
+    document.moveDown(0.25);
+  }
 
   addSection("Projects");
   for (const project of DATA.projects) {

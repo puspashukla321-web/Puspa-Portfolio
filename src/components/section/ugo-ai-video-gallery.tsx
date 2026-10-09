@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Download, FileText, Play } from "lucide-react";
+import { Download, Play } from "lucide-react";
 import { OpenAndDownloadLink } from "@/components/section/certificate-download-link";
 
 type GalleryVideo = {
@@ -73,7 +73,7 @@ export function UgoAiVideoGallery() {
     <section aria-label="U-GO AI video gallery" className="p-4 sm:p-6">
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.65fr)_minmax(13rem,0.8fr)]">
         <div className="flex min-w-0 flex-col items-center">
-          <div className="flex min-h-64 w-full items-center justify-center overflow-hidden rounded-xl bg-muted/30">
+          <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-white">
             {activeItem.type === "video" ? (
               <video
                 key={activeItem.src}
@@ -86,7 +86,7 @@ export function UgoAiVideoGallery() {
                 playsInline
                 preload="metadata"
                 aria-label={activeItem.title}
-                className="block h-auto max-h-[18rem] w-auto max-w-full object-contain"
+                className="block h-full max-h-[24rem] w-full object-contain"
               >
                 Your browser does not support embedded videos.
               </video>
@@ -95,7 +95,7 @@ export function UgoAiVideoGallery() {
                 key={activeItem.src}
                 src={`${activeItem.src}#toolbar=0&navpanes=0&view=FitH`}
                 title={activeItem.title}
-                className="h-[18rem] w-full bg-white"
+                className="h-full min-h-64 w-full bg-white sm:min-h-80"
               />
             )}
           </div>
@@ -152,7 +152,13 @@ export function UgoAiVideoGallery() {
                       </span>
                     </>
                   ) : (
-                    <FileText className="size-8 text-primary" aria-hidden="true" />
+                    <iframe
+                      src={`${item.src}#toolbar=0&navpanes=0&view=Fit`}
+                      title={`${item.title} preview`}
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      className="pointer-events-none h-full w-full bg-white"
+                    />
                   )}
                 </span>
                 <span className="min-w-0 text-xs font-medium leading-snug sm:text-sm">

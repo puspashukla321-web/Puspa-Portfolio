@@ -50,9 +50,16 @@ export default function ResumePage() {
           </ul>
         </ResumeSection>
 
-        <ResumeSection title="IT Support & Systems Administration">
-          <ul className="list-disc space-y-1 pl-5">
-            {DATA.work[0].work.map((item) => <li key={item}>{item}</li>)}
+        <ResumeSection title="Work Experience">
+          <ul className="space-y-3">
+            {DATA.work.map((role) => (
+              <li key={role.company}>
+                <strong>{role.company} — {role.title}</strong>
+                <ul className="list-disc space-y-1 pl-5">
+                  {role.work.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </li>
+            ))}
           </ul>
         </ResumeSection>
 

@@ -51,9 +51,16 @@ const Resume = () => {
           ))}
         </PreviewSection>
 
-        <PreviewSection title="Hands-on Technical Experience">
+        <PreviewSection title="Work Experience">
           <ul className="list-disc space-y-1 pl-4">
-            {DATA.work[0].work.map((item) => <li key={item}>{item}</li>)}
+            {DATA.work.map((role) => (
+              <li key={role.company}>
+                <strong>{role.company} — {role.title}:</strong>
+                <ul className="list-disc space-y-1 pl-4">
+                  {role.work.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </li>
+            ))}
           </ul>
         </PreviewSection>
 
