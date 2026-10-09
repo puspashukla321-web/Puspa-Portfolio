@@ -25,7 +25,7 @@ function LogoImage({
 
   if (!src || imageError) {
     return (
-      <span className="grid size-8 shrink-0 place-items-center rounded-full border border-border bg-muted text-xs font-bold text-foreground md:size-10">
+      <span className="grid size-9 shrink-0 place-items-center rounded-full border border-border bg-muted text-xs font-bold text-foreground md:size-11">
         {initials}
       </span>
     );
@@ -35,7 +35,7 @@ function LogoImage({
     <img
       src={src}
       alt={alt}
-      className="size-8 shrink-0 rounded-full object-contain md:size-10"
+      className="size-9 shrink-0 rounded-full object-contain md:size-11"
       onError={() => setImageError(true)}
     />
   );
@@ -75,13 +75,13 @@ export default function EducationSection() {
           className="w-full border-b-0 grid gap-2"
         >
           <div className="flex w-full items-center justify-between gap-3 text-left">
-            <div className="flex min-w-0 flex-1 items-center gap-x-3">
+            <div className="flex min-w-0 flex-1 items-center gap-x-4">
               <a
                 href={education.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit ${education.school} website`}
-                className="grid size-12 shrink-0 place-items-center rounded-full border border-border bg-background p-1 shadow-sm ring-2 ring-border/70 transition hover:scale-105 hover:ring-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:size-14"
+                className="grid size-14 shrink-0 place-items-center rounded-full border-4 border-muted-foreground/20 bg-background p-1 shadow-sm ring-2 ring-border/70 transition hover:scale-105 hover:border-muted-foreground/35 hover:ring-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:size-16"
               >
                 <LogoImage
                   src={education.logoUrl}
@@ -95,7 +95,7 @@ export default function EducationSection() {
                     href={education.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="truncate font-semibold leading-tight text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    className="truncate text-base font-semibold leading-tight text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
                   >
                     {education.school}
                   </a>
@@ -122,7 +122,7 @@ export default function EducationSection() {
                     />
                   </AccordionTrigger>
                 </div>
-                <div className="font-sans text-sm text-muted-foreground">
+                <div className="font-sans text-base text-muted-foreground sm:text-lg">
                   {education.program} - {education.specialization}
                 </div>
               </div>
