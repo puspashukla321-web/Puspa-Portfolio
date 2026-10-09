@@ -71,21 +71,23 @@ export default function EducationSection() {
                 <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
                   <div className="font-semibold leading-none flex items-center gap-2">
                     {education.school}
-                    <span className="relative inline-flex items-center w-3.5 h-3.5">
+                    <span className="relative grid size-6 shrink-0 place-items-center rounded-full border border-foreground/25 bg-foreground/10 text-foreground shadow-sm transition-colors group-hover:border-foreground/40 group-hover:bg-foreground/15 group-focus-visible:ring-2 group-focus-visible:ring-ring">
                       <ChevronRight
                         className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
-                          "translate-x-0 opacity-0",
-                          "group-hover:translate-x-1 group-hover:opacity-100",
-                          "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0",
+                          "absolute size-4 shrink-0 text-foreground stroke-[2.5] transition-all duration-200 ease-out",
+                          "translate-x-0 opacity-100",
+                          "group-hover:translate-x-0.5",
+                          "group-data-[state=open]:translate-x-0 group-data-[state=open]:opacity-0",
                         )}
+                        aria-hidden="true"
                       />
                       <ChevronDown
                         className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
+                          "absolute size-4 shrink-0 text-foreground stroke-[2.5] transition-all duration-200",
                           "opacity-0 rotate-0",
                           "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180",
                         )}
+                        aria-hidden="true"
                       />
                     </span>
                   </div>
