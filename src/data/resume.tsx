@@ -153,8 +153,8 @@ export const DATA = {
   education: [
     {
       school: "CAMAD College",
-      href: "https://pu.edu.np/",
-      logoUrl: "",
+      href: "https://www.camadcollege.edu.np/",
+      logoUrl: "/education/camad-college.jpg",
       start: "2024",
       end: "2028",
       program: "Bachelor in Computer Application",
@@ -167,8 +167,9 @@ export const DATA = {
     },
     {
       school: "Everest Florida High School",
-      href: "",
-      logoUrl: "",
+      href: "https://everestflorida.edu.np/introduction/",
+      logoUrl:
+        "https://everestflorida.edu.np/wp-content/themes/everest-florida/images/white-logo.jpeg",
       start: "2022",
       end: "2024",
       program: "Higher Secondary Education",
