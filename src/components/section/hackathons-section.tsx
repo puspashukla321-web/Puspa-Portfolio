@@ -113,12 +113,26 @@ export default function HackathonsSection() {
                         {hackathon.description}
                       </p>
                     </div>
-                    <div className="border-t border-border bg-muted/20 p-3 sm:p-4">
-                      <img
-                        src={hackathon.image}
-                        alt="Puspa and her teammates at the NASA Space Apps Hackathon in Nepal"
-                        className="block h-auto w-full object-contain"
-                      />
+                    <div className="grid border-t border-border bg-muted/20 sm:grid-cols-2">
+                      <div className="flex h-52 items-center justify-center overflow-hidden bg-muted/30 p-3 sm:h-56 sm:p-4">
+                        <img
+                          src={hackathon.image}
+                          alt="Puspa and her teammates at the NASA Space Apps Hackathon in Nepal"
+                          className="h-full w-full object-contain object-center"
+                        />
+                      </div>
+                      <OpenAndDownloadLink
+                        href="/nasa-space-apps-certificate.jpeg"
+                        filename="Puspa-Shukla-NASA-Space-Apps-Certificate.jpeg"
+                        ariaLabel="Open and download Puspa's NASA Space Apps certificate"
+                        className="flex h-52 items-center justify-center overflow-hidden border-t border-border bg-muted/30 p-3 transition-colors hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring sm:h-56 sm:border-l sm:border-t-0 sm:p-4"
+                      >
+                        <img
+                          src="/nasa-space-apps-certificate.jpeg"
+                          alt="NASA Space Apps Kathmandu Certificate of Participation awarded to Puspa Shukla"
+                          className="h-full w-full object-contain object-center"
+                        />
+                      </OpenAndDownloadLink>
                     </div>
                   </div>
                 ) : isUgoAiSession ? (
