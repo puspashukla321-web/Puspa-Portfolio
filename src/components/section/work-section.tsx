@@ -74,16 +74,16 @@ export default function WorkSection() {
       <Accordion
         type="single"
         collapsible
-        className="grid w-full items-start gap-4 md:grid-cols-2"
+        className="flex w-full flex-col gap-4"
       >
         {DATA.work.map((work) => (
           <AccordionItem
             key={work.company}
             value={work.company}
-            className="group grid min-w-0 gap-2 rounded-xl border border-border bg-card p-4 shadow-sm transition-all hover:border-primary/60 hover:shadow-md data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
+            className="group grid w-full min-w-0 gap-2 rounded-xl border border-border bg-card p-4 shadow-sm transition-all hover:border-primary/60 hover:shadow-md data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
           >
-            <AccordionTrigger className="group/trigger cursor-pointer rounded-lg p-2 text-left transition-colors hover:bg-muted/50 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden">
-            <div className="flex items-center gap-x-3 justify-between w-full text-left">
+            <AccordionTrigger className="group/trigger w-full cursor-pointer rounded-lg p-2 text-left transition-colors hover:bg-muted/50 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden">
+            <div className="flex w-full items-center justify-between gap-x-4 text-left">
               <div className="flex items-center gap-x-3 flex-1 min-w-0">
                 <LogoImage src={work.logoUrl} alt={work.company} />
                 <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
