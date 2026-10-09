@@ -72,11 +72,9 @@ export async function GET() {
     document.font("Helvetica-Bold").text(`${role.company} - ${role.title}`);
     document.font("Helvetica");
     for (const item of role.work) addBullet(item);
-    if ("toolGroups" in role && role.toolGroups) {
-      for (const group of role.toolGroups) {
-        document.font("Helvetica-Bold").text(`${group.label}: `, { continued: true });
-        document.font("Helvetica").text(group.items.join(", "));
-      }
+    if (role.tools.length > 0) {
+      document.font("Helvetica-Bold").text("Tools Used: ", { continued: true });
+      document.font("Helvetica").text(role.tools.join(", "));
     }
     document.moveDown(0.25);
   }

@@ -131,30 +131,7 @@ export default function WorkSection() {
               </div>
             )}
 
-            {"toolGroups" in work && work.toolGroups && work.toolGroups.length > 0 ? (
-              <div className="space-y-4">
-                <h3 className="font-semibold text-foreground">Tools Used</h3>
-                <div className="space-y-3">
-                  {work.toolGroups.map((group) => (
-                    <div key={group.label} className="space-y-2">
-                      <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                        {group.label}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {group.items.map((tool) => (
-                          <span
-                            key={tool}
-                            className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground"
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : work.tools && work.tools.length > 0 ? (
+            {work.tools && work.tools.length > 0 ? (
               <div className="space-y-3">
                 <h3 className="font-semibold text-foreground">Tools Used</h3>
                 <div className="flex flex-wrap gap-2">
