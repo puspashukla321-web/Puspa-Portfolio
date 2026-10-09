@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { DATA } from "@/data/resume";
 import { Icons } from "@/components/icons";
-import { ChevronDown, ChevronRight, Globe, Github, Sparkles } from "lucide-react";
+import { ChevronDown, Globe, Github, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -67,41 +67,28 @@ function PointList({
 
 export default function WorkSection() {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="grid w-full items-start gap-4 md:grid-cols-2"
-    >
-      {DATA.work.map((work) => (
-        <AccordionItem
-          key={work.company}
-          value={work.company}
-          className="grid min-w-0 gap-2 rounded-xl border border-border bg-card p-4 shadow-sm transition-shadow hover:shadow-md"
-        >
-          <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
+    <div className="space-y-4">
+      <p className="text-sm text-muted-foreground">
+        Select an experience card to explore responsibilities and tools used.
+      </p>
+      <Accordion
+        type="single"
+        collapsible
+        className="grid w-full items-start gap-4 md:grid-cols-2"
+      >
+        {DATA.work.map((work) => (
+          <AccordionItem
+            key={work.company}
+            value={work.company}
+            className="group grid min-w-0 gap-2 rounded-xl border border-border bg-card p-4 shadow-sm transition-all hover:border-primary/60 hover:shadow-md data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
+          >
+            <AccordionTrigger className="group/trigger cursor-pointer rounded-lg p-2 text-left transition-colors hover:bg-muted/50 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden">
             <div className="flex items-center gap-x-3 justify-between w-full text-left">
               <div className="flex items-center gap-x-3 flex-1 min-w-0">
                 <LogoImage src={work.logoUrl} alt={work.company} />
                 <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
                   <div className="font-semibold leading-none flex items-center gap-2">
                     {work.company}
-                    <span className="relative inline-flex items-center w-3.5 h-3.5">
-                      <ChevronRight
-                        className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
-                          "translate-x-0 opacity-0",
-                          "group-hover:translate-x-1 group-hover:opacity-100",
-                          "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0",
-                        )}
-                      />
-                      <ChevronDown
-                        className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
-                          "opacity-0 rotate-0",
-                          "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180",
-                        )}
-                      />
-                    </span>
                   </div>
                   <div className="font-sans text-sm text-muted-foreground">
                     {work.title}
@@ -115,9 +102,14 @@ export default function WorkSection() {
                   </span>
                 </div>
               )}
+              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1.5 text-[10px] font-semibold text-primary sm:text-xs">
+                <span className="group-data-[state=open]:hidden">View responsibilities &amp; tools</span>
+                <span className="hidden group-data-[state=open]:inline">Hide details</span>
+                <ChevronDown className="size-3.5 transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
+              </span>
             </div>
-          </AccordionTrigger>
-          <AccordionContent className="mt-4 space-y-4 text-sm text-muted-foreground">
+            </AccordionTrigger>
+            <AccordionContent className="mt-2 space-y-4 px-2 pb-2 text-sm text-muted-foreground">
             <div className="space-y-2">
               <h3 className="font-semibold text-foreground">What I Did</h3>
               <PointList items={work.work} accentClassName="bg-foreground/80" />
@@ -184,9 +176,10 @@ export default function WorkSection() {
                 </div>
               </div>
             )}
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
   );
 }
