@@ -91,11 +91,12 @@ export const DATA = {
   },
   work: [
     {
-      company: "Hands-on IT Support Experience",
+      company: "TechSkills Institute",
+      companyUrl: "https://techskills.institute/",
       badges: [],
       location: "",
-      title: "IT Support & Systems Administration",
-      logoUrl: "",
+      title: "Technical Hands-on Experience · IT Support & Systems Administration",
+      logoUrl: "/education/techskills-logo.png",
       start: "",
       end: "",
       work: [
@@ -118,10 +119,11 @@ export const DATA = {
     },
     {
       company: "U-GO Nepal",
+      companyUrl: "https://ugonepal.org/",
       badges: ["Internship"],
       location: "Nepal",
       title: "Intern",
-      logoUrl: "",
+      logoUrl: "/education/ugo-nepal-logo.jpeg",
       start: "",
       end: "",
       work: [
@@ -168,8 +170,7 @@ export const DATA = {
     {
       school: "Everest Florida High School",
       href: "https://everestflorida.edu.np/introduction/",
-      logoUrl:
-        "https://everestflorida.edu.np/wp-content/themes/everest-florida/images/white-logo.jpeg",
+      logoUrl: "/education/florida.png",
       start: "2022",
       end: "2024",
       program: "Higher Secondary Education",

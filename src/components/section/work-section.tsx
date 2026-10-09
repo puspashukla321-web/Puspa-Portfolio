@@ -82,33 +82,41 @@ export default function WorkSection() {
             value={work.company}
             className="group grid w-full min-w-0 gap-2 rounded-xl border border-border bg-card p-4 shadow-sm transition-all hover:border-primary/60 hover:shadow-md data-[state=open]:border-primary data-[state=open]:ring-1 data-[state=open]:ring-primary/20"
           >
-            <AccordionTrigger className="group/trigger w-full cursor-pointer rounded-lg p-2 text-left transition-colors hover:bg-muted/50 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden">
-            <div className="flex w-full items-center justify-between gap-x-4 text-left">
-              <div className="flex items-center gap-x-3 flex-1 min-w-0">
-                <LogoImage src={work.logoUrl} alt={work.company} />
-                <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
-                  <div className="font-semibold leading-none flex items-center gap-2">
-                    {work.company}
+            <div className="flex w-full items-center gap-3">
+              <a
+                href={work.companyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${work.company} website`}
+                className="grid size-14 shrink-0 place-items-center rounded-full border-4 border-muted-foreground/20 bg-background p-1 shadow-sm ring-2 ring-border/70 transition hover:scale-105 hover:border-muted-foreground/35 hover:ring-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:size-16"
+              >
+                <LogoImage src={work.logoUrl} alt={`${work.company} logo`} />
+              </a>
+              <AccordionTrigger className="group/trigger w-full min-w-0 flex-1 cursor-pointer rounded-lg p-2 text-left transition-colors hover:bg-muted/50 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden">
+                <div className="flex w-full items-center justify-between gap-x-4 text-left">
+                  <div className="flex min-w-0 flex-1 flex-col gap-1">
+                    <div className="truncate font-semibold leading-tight">
+                      {work.company}
+                    </div>
+                    <div className="font-sans text-sm text-muted-foreground">
+                      {work.title}
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-muted-foreground">
-                    {work.title}
-                  </div>
-                </div>
-              </div>
-              {(work.start || work.end) && (
-                <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                  <span>
-                    {work.start}{work.start && work.end ? " - " : ""}{work.end}
+                  {(work.start || work.end) && (
+                    <div className="flex shrink-0 items-center gap-1 text-right text-xs tabular-nums text-muted-foreground">
+                      <span>
+                        {work.start}{work.start && work.end ? " - " : ""}{work.end}
+                      </span>
+                    </div>
+                  )}
+                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1.5 text-[10px] font-semibold text-primary sm:text-xs">
+                    <span className="group-data-[state=open]:hidden">View responsibilities &amp; tools</span>
+                    <span className="hidden group-data-[state=open]:inline">Hide details</span>
+                    <ChevronDown className="size-3.5 transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
                   </span>
                 </div>
-              )}
-              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1.5 text-[10px] font-semibold text-primary sm:text-xs">
-                <span className="group-data-[state=open]:hidden">View responsibilities &amp; tools</span>
-                <span className="hidden group-data-[state=open]:inline">Hide details</span>
-                <ChevronDown className="size-3.5 transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
-              </span>
+              </AccordionTrigger>
             </div>
-            </AccordionTrigger>
             <AccordionContent className="mt-2 space-y-4 px-2 pb-2 text-sm text-muted-foreground">
             <div className="space-y-2">
               <h3 className="font-semibold text-foreground">What I Did</h3>
