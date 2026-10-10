@@ -6,23 +6,31 @@ import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
-  : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : process.env.URL
-      ? process.env.URL.replace(/\/$/, "")
-      : "http://localhost:3000";
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://puspa-shukla.vercel.app"
+).replace(/\/$/, "");
 
 const siteDescription =
   "Portfolio of Puspa Shukla, a BCA student in Kathmandu, Nepal, learning and building in web development, practical AI, and IT systems support.";
+const socialImage = {
+  url: new URL("/og-image.png", siteUrl).toString(),
+  width: 1200,
+  height: 630,
+  alt: `${DATA.name} portfolio preview`,
+};
 
 const cabinetGrotesk = localFont({
   src: "../../public/fonts/CabinetGrotesk-Medium.ttf",
   variable: "--font-sans",
   weight: "500",
+  display: "swap",
+});
+
+const clashDisplay = localFont({
+  src: "../../public/fonts/ClashDisplay-Semibold.ttf",
+  variable: "--font-clash",
+  weight: "600",
   display: "swap",
 });
 
@@ -40,6 +48,7 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [socialImage],
   },
   robots: {
     index: true,
@@ -56,7 +65,7 @@ export const metadata: Metadata = {
     title: `${DATA.name} | BCA Student in Kathmandu, Nepal`,
     card: "summary_large_image",
     description: siteDescription,
-    images: ["/me.png"],
+    images: [socialImage.url],
   },
 };
 
@@ -75,8 +84,9 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen overflow-x-hidden bg-background font-sans antialiased relative",
+          "min-h-screen overflow-x-hidden bg-background font-sans antialiased",
           cabinetGrotesk.variable,
+          clashDisplay.variable,
         )}
         suppressHydrationWarning
       >
@@ -103,19 +113,7 @@ export default function RootLayout({
                 }),
               }}
             />
-            <div className="absolute inset-[0] overflow-hidden z-0">
-              <FlickeringGrid
-                className="h-[100px] w-full"
-                squareSize={2}
-                gridGap={2}
-                style={{
-                  maskImage: "linear-gradient(to bottom, black, transparent)",
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, black, transparent)",
-                }}
-              />
-            </div>
-            <div className="relative z-10 mx-auto w-full px-4 py-12 pb-24 sm:px-6 sm:py-24 max-w-2xl sm:max-w-3xl ">
+            <div className="mx-auto w-full pb-24">
               {children}
             </div>
             <Navbar />

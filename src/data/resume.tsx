@@ -131,21 +131,14 @@ export const DATA = {
       ],
       impact: [],
       tools: [
-        "ChatGPT",
-        "Claude",
-        "NotebookLM",
-        "Perplexity",
-        "Replit",
-        "Lovable",
         "Zoom",
         "Google Meet",
         "Microsoft Word",
         "Microsoft Excel",
         "Google Sheets",
-        "Computers",
-        "Printers",
         "Digital document management",
         "Social media design tools",
+        "Computers & printers",
       ],
       urls: [] as { label: string; href: string }[],
     },
@@ -154,7 +147,8 @@ export const DATA = {
     {
       school: "CAMAD College",
       href: "https://pu.edu.np/",
-      logoUrl: "",
+      websiteUrl: "https://www.camadcollege.edu.np/",
+      logoUrl: "https://www.camadcollege.edu.np/favicon.ico",
       start: "2024",
       end: "2028",
       program: "Bachelor in Computer Application",
@@ -168,7 +162,8 @@ export const DATA = {
     {
       school: "Everest Florida High School",
       href: "",
-      logoUrl: "",
+      websiteUrl: "https://everestflorida.edu.np/introduction/",
+      logoUrl: "https://everestflorida.edu.np/favicon.ico",
       start: "2022",
       end: "2024",
       program: "Higher Secondary Education",
@@ -182,26 +177,48 @@ export const DATA = {
   projects: [
     {
       title: "Currency Converter",
-      href: "",
+      href: "https://puspashukla321-web.github.io/CurrencyConverter/?From=USD&from=NPR",
       dates: "Web project",
       active: true,
       description:
         "Built a real-time currency conversion tool with input validation and a responsive interface.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/CurrencyConverter/?From=USD&from=NPR",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/CurrencyConverter",
+        },
+      ],
+      image: "/currency-converter.png",
       video: "",
     },
     {
       title: "Tic Tac Toe Game",
-      href: "",
+      href: "https://puspashukla321-web.github.io/TicTacToe/",
       dates: "Web project",
       active: true,
       description:
         "Created a two-player JavaScript game with win/draw detection and CSS-based visual feedback.",
       technologies: ["JavaScript", "CSS"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/TicTacToe/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/TicTacToe",
+        },
+      ],
+      image: "/tic-tac-toe.png",
       video: "",
     },
     {
@@ -218,14 +235,25 @@ export const DATA = {
     },
     {
       title: "Route Way System",
-      href: "",
+      href: "http://localhost:3000/",
       dates: "Web project",
       active: true,
       description:
         "Designed a route-planning application that calculates efficient paths between locations using graph-based algorithms, with a focus on clean logic and usable output.",
       technologies: ["JavaScript", "Algorithms"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "http://localhost:3000/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/RouteWay-System",
+        },
+      ],
+      image: "/routeway-system.png",
       video: "",
     },
   ],

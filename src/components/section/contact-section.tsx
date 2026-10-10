@@ -1,87 +1,99 @@
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { DATA } from "@/data/resume";
+import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Icons } from "@/components/icons";
+import { DATA } from "@/data/resume";
 
 export default function ContactSection() {
   return (
-    <div className="border rounded-xl p-10 relative">
-      <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
-        <span className="text-background text-sm font-medium">Contact</span>
-      </div>
-      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
-        <FlickeringGrid
-          className="h-full w-full"
-          squareSize={2}
-          gridGap={2}
-          style={{
-            maskImage: "linear-gradient(to bottom, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-          }}
+    <div className="grid overflow-hidden border border-border md:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative isolate overflow-hidden bg-primary p-7 text-primary-foreground sm:p-10">
+        <div
+          aria-hidden="true"
+          className="absolute -right-16 -top-20 -z-10 size-64 rounded-full border border-primary-foreground/20"
         />
-      </div>
-      <div className="relative flex flex-col items-center gap-4 text-center">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Get in Touch
-        </h2>
-        <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Send me a direct question on{" "}
-          <a
-            href={DATA.contact.social.LinkedIn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 underline underline-offset-4"
-          >
-            LinkedIn
-          </a>{" "}
-          or{" "}
-          <a
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 underline underline-offset-4"
-          >
-            X
-          </a>
-          .
+        <div
+          aria-hidden="true"
+          className="absolute -right-8 -top-12 -z-10 size-48 rounded-full border border-primary-foreground/20"
+        />
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/75">
+          Always glad to meet curious people
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-5 text-sm">
-          <a className="inline-flex items-center gap-2 underline underline-offset-4" href={`mailto:${DATA.contact.email}`}>
-            <Icons.email className="size-4" />
-            {DATA.contact.email}
-          </a>
-          <a className="inline-flex items-center gap-2 underline underline-offset-4" href={`tel:${DATA.contact.tel}`}>
-            {DATA.contact.tel}
-          </a>
-          <a
-            className="inline-flex items-center gap-2 underline underline-offset-4"
-            href={DATA.contact.social.LinkedIn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icons.linkedin className="size-4" />
-            LinkedIn
-          </a>
-          <a
-            className="inline-flex items-center gap-2 underline underline-offset-4"
-            href={DATA.contact.social.GitHub.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icons.github className="size-4" />
-            GitHub
-          </a>
-          <a
-            className="inline-flex items-center gap-2 underline underline-offset-4"
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icons.x className="size-4" />
-            X
-          </a>
+        <h3 className="mt-6 max-w-md font-display text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-5xl">
+          Good things start with a conversation.
+        </h3>
+        <p className="mt-5 max-w-sm text-sm leading-6 text-primary-foreground/80">
+          Have a question, an opportunity, or an idea to explore? I&apos;d love
+          to hear from you.
+        </p>
+        <a
+          href={`mailto:${DATA.contact.email}`}
+          className="group mt-8 inline-flex items-center gap-3 rounded-full bg-primary-foreground px-5 py-3 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+        >
+          Write me an email
+          <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        </a>
+      </div>
+
+      <div className="flex flex-col justify-center gap-6 bg-card p-7 sm:p-10">
+        <a
+          href={`mailto:${DATA.contact.email}`}
+          className="group flex items-start gap-4"
+        >
+          <span className="flex size-10 shrink-0 items-center justify-center border border-border text-primary">
+            <Mail className="size-4" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              Email
+            </span>
+            <span className="mt-1 block break-all text-sm font-semibold group-hover:text-primary">
+              {DATA.contact.email}
+            </span>
+          </span>
+          <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+        </a>
+        <a
+          href={`tel:${DATA.contact.tel}`}
+          className="group flex items-start gap-4"
+        >
+          <span className="flex size-10 shrink-0 items-center justify-center border border-border text-primary">
+            <Phone className="size-4" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              Phone
+            </span>
+            <span className="mt-1 block text-sm font-semibold group-hover:text-primary">
+              {DATA.contact.tel}
+            </span>
+          </span>
+          <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+        </a>
+        <div className="border-t border-border pt-5">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
+            Find me elsewhere
+          </p>
+          <div className="flex flex-wrap gap-x-5 gap-y-3">
+            {Object.entries(DATA.contact.social)
+              .filter(([name]) => name !== "email")
+              .map(([name, social]) => {
+                const Icon = social.icon ?? Icons.globe;
+                return (
+                  <a
+                    key={name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Icon className="size-4" />
+                    {name}
+                    <ArrowUpRight className="size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </a>
+                );
+              })}
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
