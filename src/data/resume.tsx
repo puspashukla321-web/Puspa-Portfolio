@@ -259,7 +259,18 @@ export const DATA = {
       description:
         "Designed a route-planning application that calculates efficient paths between locations using graph-based algorithms, with a focus on clean logic and usable output.",
       technologies: ["JavaScript", "Algorithms"],
-      links: [] as never[],
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "http://localhost:3000/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/RouteWay-System",
+        },
+      ],
       image: "/routeway-system.png",
       video: "",
     },
