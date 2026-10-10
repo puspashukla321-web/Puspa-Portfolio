@@ -95,7 +95,7 @@ export default function EducationSection() {
                     href={education.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="truncate text-base font-semibold leading-tight text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-lg"
+                    className="truncate text-sm font-semibold leading-tight text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     {education.school}
                   </a>
