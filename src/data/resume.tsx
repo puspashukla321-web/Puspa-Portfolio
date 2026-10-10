@@ -25,7 +25,7 @@ export const DATA = {
     "I’m a BCA student at CAMAD College, affiliated with Pokhara University, learning through web projects and hands-on IT systems support. Through U-GO, I’ve helped lead AI learning initiatives for scholars; its global publication reported a 97% course completion rate across more than 3,000 scholars in eight countries. I enjoy sharing what I learn, mentoring others, and helping more women find opportunities in technology.",
   summary:
     "I’m a BCA student at CAMAD College, affiliated with Pokhara University, learning through web projects and hands-on IT systems support. Through U-GO, I’ve helped lead AI learning initiatives for scholars; its global publication reported a 97% course completion rate across more than 3,000 scholars in eight countries. I enjoy sharing what I learn, mentoring others, and helping more women find opportunities in technology.",
-  avatarUrl: "",
+  avatarUrl: "/puspa-profile.png",
   skillGroups: [
     { label: "Programming Languages", items: "Python, HTML, CSS, JavaScript, C" },
     { label: "Development Tools", items: "Git, GitHub, VS Code, Substack" },
@@ -91,11 +91,12 @@ export const DATA = {
   },
   work: [
     {
-      company: "Hands-on IT Support Experience",
+      company: "TechSkills Institute",
+      companyUrl: "https://techskills.institute/",
       badges: [],
       location: "",
-      title: "IT Support & Systems Administration",
-      logoUrl: "",
+      title: "Technical Hands-on Experience · IT Support & Systems Administration",
+      logoUrl: "/education/techskills-logo.png",
       start: "",
       end: "",
       work: [
@@ -118,10 +119,11 @@ export const DATA = {
     },
     {
       company: "U-GO Nepal",
+      companyUrl: "https://ugonepal.org/",
       badges: ["Internship"],
       location: "Nepal",
       title: "Intern",
-      logoUrl: "",
+      logoUrl: "/education/ugo-nepal-logo.jpeg",
       start: "",
       end: "",
       work: [
@@ -148,7 +150,7 @@ export const DATA = {
       school: "CAMAD College",
       href: "https://pu.edu.np/",
       websiteUrl: "https://www.camadcollege.edu.np/",
-      logoUrl: "https://www.camadcollege.edu.np/favicon.ico",
+      logoUrl: "/education/camad-college.jpg",
       start: "2024",
       end: "2028",
       program: "Bachelor in Computer Application",
@@ -163,7 +165,7 @@ export const DATA = {
       school: "Everest Florida High School",
       href: "",
       websiteUrl: "https://everestflorida.edu.np/introduction/",
-      logoUrl: "https://everestflorida.edu.np/favicon.ico",
+      logoUrl: "/education/florida.png",
       start: "2022",
       end: "2024",
       program: "Higher Secondary Education",
@@ -223,14 +225,25 @@ export const DATA = {
     },
     {
       title: "Rock, Paper, Scissors Game",
-      href: "",
+      href: "https://puspashukla321-web.github.io/ScissorPaperRock/",
       dates: "Web project",
       active: true,
       description:
         "Developed a player-versus-computer game with randomized logic, winner detection, and a dynamic score display.",
       technologies: ["JavaScript", "CSS"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/ScissorPaperRock/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/ScissorPaperRock",
+        },
+      ],
+      image: "/scissor-paper-rock.png",
       video: "",
     },
     {

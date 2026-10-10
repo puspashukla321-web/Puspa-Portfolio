@@ -130,10 +130,9 @@ export default function EducationSection() {
                         aria-hidden="true"
                       />
                     </span>
-                  </div>
-                  <div className="font-sans text-sm text-muted-foreground">
-                    {education.program} - {education.specialization}
-                  </div>
+                </div>
+                <div className="font-sans text-base text-muted-foreground sm:text-lg">
+                  {education.program} - {education.specialization}
                 </div>
                 <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
                   <span>
@@ -141,6 +140,7 @@ export default function EducationSection() {
                   </span>
                 </div>
               </div>
+            </div>
             </AccordionTrigger>
           </div>
           <AccordionContent className="mt-4 space-y-4 text-sm text-muted-foreground">
