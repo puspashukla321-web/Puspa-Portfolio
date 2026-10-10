@@ -91,14 +91,9 @@ export default function EducationSection() {
               </a>
               <div className="flex min-w-0 flex-1 flex-col gap-1">
                 <div className="flex min-w-0 items-center gap-2">
-                  <a
-                    href={education.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="truncate text-base font-semibold leading-tight text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
+                  <span className="truncate text-base font-semibold leading-tight text-foreground">
                     {education.school}
-                  </a>
+                  </span>
                   <AccordionTrigger
                     aria-label={`Toggle education details for ${education.school}`}
                     className="group relative inline-flex size-5 w-5 flex-none items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden"
@@ -138,16 +133,6 @@ export default function EducationSection() {
             <div className="space-y-2">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <h3 className="font-semibold text-foreground">Education Details</h3>
-                {education.href && (
-                  <a
-                    href={education.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm underline underline-offset-4"
-                  >
-                    Visit official college website
-                  </a>
-                )}
               </div>
               <PointList
                 items={education.details}
