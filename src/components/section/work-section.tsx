@@ -68,9 +68,6 @@ function PointList({
 export default function WorkSection() {
   return (
     <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">
-        Select an experience card to explore responsibilities and tools used.
-      </p>
       <Accordion
         type="single"
         collapsible
