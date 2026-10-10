@@ -184,14 +184,25 @@ export const DATA = {
   projects: [
     {
       title: "Currency Converter",
-      href: "",
+      href: "https://puspashukla321-web.github.io/CurrencyConverter/?From=USD&from=NPR",
       dates: "Web project",
       active: true,
       description:
         "Built a real-time currency conversion tool with input validation and a responsive interface.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/CurrencyConverter/?From=USD&from=NPR",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/CurrencyConverter",
+        },
+      ],
+      image: "/currency-converter.png",
       video: "",
     },
     {
@@ -202,7 +213,18 @@ export const DATA = {
       description:
         "Created a two-player JavaScript game with win/draw detection and CSS-based visual feedback.",
       technologies: ["JavaScript", "CSS"],
-      links: [] as never[],
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/TicTacToe/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/TicTacToe",
+        },
+      ],
       image: "/tic-tac-toe.png",
       video: "",
     },
