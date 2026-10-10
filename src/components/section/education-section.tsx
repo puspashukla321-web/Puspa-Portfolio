@@ -106,9 +106,9 @@ export default function EducationSection() {
                     <ChevronRight
                       className={cn(
                         "absolute size-3.5 stroke-2 transition-all duration-300 ease-out",
-                        "translate-x-0 opacity-0",
-                        "group-hover/education:translate-x-1 group-hover/education:opacity-100",
-                        "group-focus-visible:translate-x-1 group-focus-visible:opacity-100",
+                        "translate-x-0 opacity-100",
+                        "group-hover/education:translate-x-1",
+                        "group-focus-visible:translate-x-1",
                         "group-data-[state=open]:translate-x-0 group-data-[state=open]:opacity-0",
                       )}
                       aria-hidden="true"
