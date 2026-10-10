@@ -253,14 +253,14 @@ export const DATA = {
     },
     {
       title: "Route Way System",
-      href: "",
+      href: "http://localhost:3000/",
       dates: "Web project",
       active: true,
       description:
         "Designed a route-planning application that calculates efficient paths between locations using graph-based algorithms, with a focus on clean logic and usable output.",
       technologies: ["JavaScript", "Algorithms"],
       links: [] as never[],
-      image: "",
+      image: "/routeway-system.png",
       video: "",
     },
   ],
