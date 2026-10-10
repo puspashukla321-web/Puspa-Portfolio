@@ -74,7 +74,7 @@ export default function WorkSection() {
       <Accordion
         type="single"
         collapsible
-        className="grid w-full items-start gap-4 md:grid-cols-2"
+        className="grid w-full grid-cols-1 items-start gap-4"
       >
         {DATA.work.map((work) => (
           <AccordionItem
@@ -102,7 +102,7 @@ export default function WorkSection() {
                   </span>
                 </div>
               )}
-              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1.5 text-[10px] font-semibold text-primary sm:text-xs">
+              <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1.5 text-[10px] font-semibold text-primary sm:text-xs">
                 <span className="group-data-[state=open]:hidden">View responsibilities &amp; tools</span>
                 <span className="hidden group-data-[state=open]:inline">Hide details</span>
                 <ChevronDown className="size-3.5 transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
