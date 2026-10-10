@@ -103,24 +103,26 @@ export default function EducationSection() {
                     aria-label={`Toggle education details for ${education.school}`}
                     className="group relative inline-flex size-5 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden"
                   >
-                    <ChevronRight
-                      className={cn(
-                        "absolute size-3.5 stroke-2 transition-all duration-300 ease-out",
-                        "translate-x-0 opacity-100",
-                        "group-hover/education:translate-x-1",
-                        "group-focus-visible:translate-x-1",
-                        "group-data-[state=open]:translate-x-0 group-data-[state=open]:opacity-0",
-                      )}
-                      aria-hidden="true"
-                    />
-                    <ChevronDown
-                      className={cn(
-                        "absolute size-3.5 stroke-2 transition-all duration-200",
-                        "rotate-0 opacity-0",
-                        "group-data-[state=open]:rotate-180 group-data-[state=open]:opacity-100",
-                      )}
-                      aria-hidden="true"
-                    />
+                    <span className="relative inline-flex size-5 items-center justify-center">
+                      <ChevronRight
+                        className={cn(
+                          "absolute size-3.5 stroke-2 transition-all duration-300 ease-out",
+                          "translate-x-0 opacity-0",
+                          "group-hover/education:translate-x-1 group-hover/education:opacity-100",
+                          "group-focus-visible:translate-x-1 group-focus-visible:opacity-100",
+                          "group-data-[state=open]:translate-x-0 group-data-[state=open]:opacity-0",
+                        )}
+                        aria-hidden="true"
+                      />
+                      <ChevronDown
+                        className={cn(
+                          "absolute size-3.5 stroke-2 transition-all duration-200",
+                          "rotate-0 opacity-0",
+                          "group-data-[state=open]:rotate-180 group-data-[state=open]:opacity-100",
+                        )}
+                        aria-hidden="true"
+                      />
+                    </span>
                   </AccordionTrigger>
                 </div>
                 <div className="font-sans text-base text-muted-foreground sm:text-lg">
