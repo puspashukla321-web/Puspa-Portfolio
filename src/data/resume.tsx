@@ -230,14 +230,25 @@ export const DATA = {
     },
     {
       title: "Rock, Paper, Scissors Game",
-      href: "",
+      href: "https://puspashukla321-web.github.io/ScissorPaperRock/",
       dates: "Web project",
       active: true,
       description:
         "Developed a player-versus-computer game with randomized logic, winner detection, and a dynamic score display.",
       technologies: ["JavaScript", "CSS"],
-      links: [] as never[],
-      image: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3.5" />,
+          type: "Live Demo",
+          href: "https://puspashukla321-web.github.io/ScissorPaperRock/",
+        },
+        {
+          icon: <Icons.github className="size-3.5" />,
+          type: "View Source",
+          href: "https://github.com/puspashukla321-web/ScissorPaperRock",
+        },
+      ],
+      image: "/scissor-paper-rock.png",
       video: "",
     },
     {
