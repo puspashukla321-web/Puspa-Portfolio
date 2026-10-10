@@ -101,7 +101,7 @@ export default function EducationSection() {
                   </a>
                   <AccordionTrigger
                     aria-label={`Toggle education details for ${education.school}`}
-                    className="group relative inline-flex size-5 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden"
+                    className="group relative inline-flex size-5 w-5 flex-none items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:hidden"
                   >
                     <span className="relative inline-flex size-5 items-center justify-center">
                       <ChevronRight
