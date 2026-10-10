@@ -14,10 +14,10 @@ const siteUrl = (
 const siteDescription =
   "Portfolio of Puspa Shukla, a BCA student in Kathmandu, Nepal, learning and building in web development, practical AI, and IT systems support.";
 const socialImage = {
-  url: new URL("/og-image.png", siteUrl).toString(),
-  width: 1200,
-  height: 630,
-  alt: `${DATA.name} portfolio preview`,
+  url: new URL(DATA.avatarUrl, siteUrl).toString(),
+  width: 768,
+  height: 768,
+  alt: `Portrait of ${DATA.name}`,
 };
 
 const cabinetGrotesk = localFont({
