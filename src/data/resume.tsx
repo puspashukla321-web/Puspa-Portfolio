@@ -196,14 +196,14 @@ export const DATA = {
     },
     {
       title: "Tic Tac Toe Game",
-      href: "",
+      href: "https://puspashukla321-web.github.io/TicTacToe/",
       dates: "Web project",
       active: true,
       description:
         "Created a two-player JavaScript game with win/draw detection and CSS-based visual feedback.",
       technologies: ["JavaScript", "CSS"],
       links: [] as never[],
-      image: "",
+      image: "/tic-tac-toe.png",
       video: "",
     },
     {
