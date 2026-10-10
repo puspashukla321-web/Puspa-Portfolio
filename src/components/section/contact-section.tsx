@@ -25,12 +25,12 @@ export default function ContactSection() {
         <p className="mx-auto max-w-lg text-balance text-muted-foreground">
           Want to chat? Just shoot me a dm{" "}
           <a
-            href={DATA.contact.social.X.url}
+            href={DATA.contact.social.LinkedIn.url}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-sm text-blue-500 underline underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            with a direct question on twitter
+            with a direct question on LinkedIn
           </a>{" "}
           and I&apos;ll respond whenever I can. I will ignore all soliciting.
         </p>
