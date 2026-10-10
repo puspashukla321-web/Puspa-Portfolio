@@ -5,6 +5,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import "./globals.css";
 
 const siteUrl = (
@@ -84,7 +85,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen overflow-x-hidden bg-background font-sans antialiased",
+          "relative min-h-screen overflow-x-hidden bg-background font-sans antialiased",
           cabinetGrotesk.variable,
           clashDisplay.variable,
         )}
@@ -113,7 +114,19 @@ export default function RootLayout({
                 }),
               }}
             />
-            <div className="mx-auto w-full pb-24">
+            <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
+              <FlickeringGrid
+                className="h-[100px] w-full"
+                squareSize={2}
+                gridGap={2}
+                style={{
+                  maskImage: "linear-gradient(to bottom, black, transparent)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black, transparent)",
+                }}
+              />
+            </div>
+            <div className="relative z-10 mx-auto w-full max-w-2xl px-4 py-12 pb-24 sm:max-w-3xl sm:px-6 sm:py-24">
               {children}
             </div>
             <Navbar />
